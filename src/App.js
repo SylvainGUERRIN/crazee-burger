@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Sylvain
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+  //les states
+  const [prenom, setPrenom] = useState("Sylvain")
+  const [count, setCount] = useState(1)
+
+  //les comportements
+  const handleClick = () => {
+    setCount(count + 1)
+  }
+
+  //l'affichage (render)
+  return <>
+    <h1>{prenom}</h1>
+    <p>{count}</p>
+    <button onClick={handleClick} >Incrémenter</button>
+  </>
 }
 
 export default App;
