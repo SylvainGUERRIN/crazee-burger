@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function LoginForm() {
     //state
-    const [inputValue, setInputValue] = useState("Sylvain")
+    const [inputValue, setInputValue] = useState("")
 
     //comportement
     const handleSubmit = (event) => { 
@@ -17,7 +17,7 @@ export default function LoginForm() {
 
     return (
         <form action="submit" onSubmit={handleSubmit}>
-        <h1>Bienvenue chez nous</h1>
+        <h1>Bienvenue chez nous !</h1>
         <br></br>
         <h2>Connectez-vous</h2>
         <input value={inputValue} onChange={handleChange} type="text" placeholder="Entrez votre prénom..." required />
