@@ -16,14 +16,14 @@ export default function LoginForm() {
     setInputValue(event.target.value);
   };
 
-  const navigateToOrderPage = () => {
+  /*const navigateToOrderPage = () => {
     navigate({
       pathname: '/order-page',
       search: createSearchParams({
         name: inputValue
       }).toString()
     })
-  }
+  }*/
 
   return (
     <form action="submit" onSubmit={handleSubmit}>
@@ -37,7 +37,9 @@ export default function LoginForm() {
         placeholder="Entrez votre prénom..."
         required
       />
-      <button onClick={navigateToOrderPage}>Accédez à votre espace</button>
+      <Link to="/order-page">
+        <button>Accédez à votre espace</button>
+      </Link>
     </form>
   );
 }

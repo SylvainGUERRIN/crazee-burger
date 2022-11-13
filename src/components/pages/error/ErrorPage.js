@@ -1,5 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function ErrorPage() {
-  return (
-    <div>ErrorPage</div>
-  )
+    return<>
+    <Link to="/login">
+      <button>Retourner à la page d'accueil</button>
+    </Link>
+  </>
 }
