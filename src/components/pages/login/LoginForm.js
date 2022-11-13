@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createSearchParams, Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
   const navigate = useNavigate()
@@ -10,20 +10,12 @@ export default function LoginForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setInputValue("");
+    navigate(`/order/${inputValue}`)
   };
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
-
-  /*const navigateToOrderPage = () => {
-    navigate({
-      pathname: '/order-page',
-      search: createSearchParams({
-        name: inputValue
-      }).toString()
-    })
-  }*/
 
   return (
     <form action="submit" onSubmit={handleSubmit}>
@@ -37,9 +29,7 @@ export default function LoginForm() {
         placeholder="Entrez votre prénom..."
         required
       />
-      <Link to="/order-page">
-        <button>Accédez à votre espace</button>
-      </Link>
+      <button>Accédez à votre espace</button>
     </form>
   );
 }
