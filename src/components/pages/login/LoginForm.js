@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
+import {BsPersonCircle} from 'react-icons/bs'
 
 export default function LoginForm() {
   const navigate = useNavigate()
@@ -26,13 +27,16 @@ export default function LoginForm() {
         <h2>Connectez-vous</h2>
       </div>
       <div>
-        <input
-          value={inputValue}
-          onChange={handleChange}
-          type="text"
-          placeholder="Entrez votre prénom..."
-          required
-        />
+        <div className="input-with-icon">
+          <BsPersonCircle className="icon"/>
+          <input
+            value={inputValue}
+            onChange={handleChange}
+            type="text"
+            placeholder="Entrez votre prénom..."
+            required
+          />
+        </div>
         <button>Accédez à votre espace</button>
       </div>
     </LoginFormStyled>
@@ -58,12 +62,40 @@ const LoginFormStyled = styled.form`
       margin-bottom: 40px;
     }
     h1{
-      color: #f56a2c;
+      //color: #f56a2c;
+      color: white;
       font-size: 48px;
     }
     h2{
-      color: #8e8b8b;
+      //color: #8e8b8b;
+      color: white;
       margin: 20px 10px 10px;
       font-size: 36px;
+    }
+
+    .input-with-icon{
+      //border: 1px solid red;
+      background-color: #ffffff;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      padding: 18px 24px;
+      margin: 18px 0;
+
+      .icon{
+        color: grey;
+        font-size: 15px;
+        margin-right: 8px;
+      }
+      input{
+        //background-color: #8e8b8b;
+        border: none;
+        font-size: 15px;
+        color: #17161a;
+      }
+      &::placeholder{
+        background: white;
+        color: lightgrey;
+      }
     }
   `;
