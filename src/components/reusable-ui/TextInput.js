@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { theme } from '../../theme';
 
 export default function TextInput({value, onChange, Icon, ...restProps}) {
-    //console.log(restProps);
   return (
     <InputStyled>
         {Icon && Icon}
@@ -30,7 +29,6 @@ const InputStyled = styled.div`
     margin-right: 8px;
     }
     input{
-    //background-color: #8e8b8b;
     border: none;
     font-size: ${theme.fonts.size.P0};
     color: ${theme.colors.dark};

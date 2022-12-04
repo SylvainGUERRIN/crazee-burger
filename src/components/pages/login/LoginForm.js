@@ -49,10 +49,6 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
-    //border: 2px solid green;
-    //background: red;
-    //display: flex;
-    //flex-direction: column;
     text-align: center;
     max-width: 500px;
     min-width: 400px;
