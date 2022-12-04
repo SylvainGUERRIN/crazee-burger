@@ -27,6 +27,8 @@ const NavbarStyled = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 30px 0 10px;
+  border-radius: 15px 15px 0 0;
+  background-color: ${theme.colors.white}; 
 
   .rightSide{
     width: 50%;
