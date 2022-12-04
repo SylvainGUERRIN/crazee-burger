@@ -1,12 +1,16 @@
 import { Link, useParams } from "react-router-dom"
+import Navbar from "../../reusable-ui/navbar/Navbar"
+import Main from "./Main"
 
 export default function OrderPage() {
     const {name} = useParams()
 
-      return<>
-        <h1>Bonjour {name}</h1>
-        <Link to="/login">
-          <button>Déconnexion</button>
-        </Link>
-      </>
+      return (
+      <div>
+        <div className="container">
+          <Navbar/>
+          <Main/>
+        </div>
+      </div>
+      )
 }
