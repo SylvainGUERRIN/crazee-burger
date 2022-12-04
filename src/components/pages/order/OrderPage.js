@@ -5,7 +5,7 @@ export default function OrderPage() {
 
       return<>
         <h1>Bonjour {name}</h1>
-        <Link to="/login">
+        <Link to="/">
           <button>Déconnexion</button>
         </Link>
       </>
