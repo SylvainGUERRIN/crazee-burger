@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { theme } from '../../theme';
 
 
-export default function Logo({scale}) {
+export default function Logo({className}) {
   return (
-    <LogoStyled scale={scale}>
+    <LogoStyled className={className}>
         <h1>CRAZEE</h1>
         <img src='/images/logo-orange.png' alt='logo Crazee Burger' />
         <h1>BURGER</h1>
@@ -16,7 +16,6 @@ const LogoStyled = styled.div`
   //background: blue;
   display: flex;
   align-items: center;
-  transform: scale(${props => props.scale});
 
   h1{
     display: inline;

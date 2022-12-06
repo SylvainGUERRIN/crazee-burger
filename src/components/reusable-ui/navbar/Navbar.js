@@ -27,7 +27,7 @@ const NavbarStyled = styled.div`
   height: 10vh;
   display: flex;
   justify-content: space-between;
-  padding: 0 30px 0 10px;
+  padding: 0 20px;
   border-radius: 15px 15px 0 0;
   background-color: ${theme.colors.white}; 
 
