@@ -4,14 +4,14 @@ import { Link} from "react-router-dom"
 import {IoPersonCircleOutline} from "react-icons/io5"
 import {theme} from "../../../theme"
 
-export default function Navbar({name}) {
+export default function Navbar({username}) {
   return (
     <NavbarStyled>
         <Logo scale={"1"}/>
         <div className='rightSide'>
             <div className='menu'>
                 <div className='menu-link'>
-                    <p>Hey, <strong className='name'>{name}</strong></p>
+                    <p>Hey, <strong className='name'>{username}</strong></p>
                     <Link to="/login">
                         <button>Se déconnecter</button>
                     </Link>
@@ -24,6 +24,7 @@ export default function Navbar({name}) {
 }
 
 const NavbarStyled = styled.div`
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   padding: 0 30px 0 10px;

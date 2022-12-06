@@ -5,12 +5,12 @@ import styled from 'styled-components';
 import { theme } from '../../../theme';
 
 export default function OrderPage() {
-    const {name} = useParams()
+    const {username} = useParams()
 
       return (
       <OrderPageStyled>
         <div className="container">
-          <Navbar name={name}/>
+          <Navbar name={username}/>
           <Main/>
         </div>
       </OrderPageStyled>
@@ -19,16 +19,21 @@ export default function OrderPage() {
 
 const OrderPageStyled = styled.div`
   background-color: ${theme.colors.primary};
-  /* height: 100vh; */
-  padding: 15px;
+  height: 100vh;
+  /* padding: 15px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .container{
     width: 100%;
-    /* height: 100vh; */
+    height: 95vh;
     max-width: 1400px;
     /* background-color: ${theme.colors.white}; */
     margin: 5px auto;
     box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
   }
 `;
