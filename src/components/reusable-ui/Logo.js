@@ -13,7 +13,6 @@ export default function Logo({scale}) {
 }
 
 const LogoStyled = styled.div`
-  //background: blue;
   display: flex;
   align-items: center;
   transform: scale(${props => props.scale});

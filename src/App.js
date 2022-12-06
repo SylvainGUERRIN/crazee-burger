@@ -7,7 +7,7 @@ import OrderPage from "./components/pages/order/OrderPage"
 function App(){
   return (
     <Routes>
-      <Route path="/login" element={<LoginPage/>}/>
+      <Route path="/" element={<LoginPage/>}/>
       <Route path="/order/:name" element={<OrderPage/>}/>
       <Route path="*" element={<ErrorPage/>}/>
     </Routes>
