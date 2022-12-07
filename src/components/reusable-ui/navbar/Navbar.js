@@ -4,6 +4,7 @@ import {theme} from "../../../theme"
 import NavbarRightSide from './NavbarRightSide';
 
 export default function Navbar({username}) {
+    console.log(username);
   return (
     <NavbarStyled>
         <Logo />
@@ -17,7 +18,9 @@ const NavbarStyled = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
-  border-radius: 15px 15px 0 0;
+  /* border-radius: 15px 15px 0 0; */
+  border-top-left-radius: ${theme.borderRadius.extraRound};
+  border-top-right-radius: ${theme.borderRadius.extraRound};
   background-color: ${theme.colors.white}; 
 
   

@@ -5,12 +5,13 @@ import styled from 'styled-components';
 import { theme } from '../../../theme';
 
 export default function OrderPage() {
-    const {username} = useParams()
+    const {name} = useParams()
+  
 
       return (
       <OrderPageStyled>
         <div className="container">
-          <Navbar name={username}/>
+          <Navbar username={name}/>
           <Main/>
         </div>
       </OrderPageStyled>
