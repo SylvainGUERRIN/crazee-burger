@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import Logo from "../Logo";
 import {theme} from "../../../theme"
 import NavbarRightSide from './NavbarRightSide';
+import { refreshPage } from '../../../utils/window';
 
 export default function Navbar({username}) {
-    console.log(username);
   return (
     <NavbarStyled>
-        <Logo />
+        <Logo className={"logo-order-page"} onClick={() => refreshPage()} />
         <NavbarRightSide username={username}/>
     </NavbarStyled>
   )
@@ -23,5 +23,7 @@ const NavbarStyled = styled.div`
   border-top-right-radius: ${theme.borderRadius.extraRound};
   background-color: ${theme.colors.white}; 
 
-  
+  .logo-order-page{
+    cursor: pointer;
+  }
 `;
