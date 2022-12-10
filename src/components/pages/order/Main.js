@@ -4,6 +4,8 @@ import {theme} from "../../../theme"
 export default function Main() {
   return (
     <MainStyled>
+      <div className='basket'></div>
+      <div className='menu'></div>
     </MainStyled>
   )
 }
@@ -15,4 +17,7 @@ const MainStyled = styled.div`
   flex: 1;
   border-bottom-left-radius: ${theme.borderRadius.extraRound};
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
+
+  display: grid;
+  grid-template-columns: 25% 75%;
 `;
