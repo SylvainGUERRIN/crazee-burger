@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import Navbar from "../../reusable-ui/navbar/Navbar"
-import Main from "./Main"
+import Main from "./Main/Main"
 import styled from 'styled-components';
 import { theme } from '../../../theme';
 
