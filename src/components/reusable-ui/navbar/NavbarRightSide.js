@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import {IoPersonCircleOutline} from "react-icons/io5"
-import {theme} from "../../../theme"
 import Profile from './Profile';
 
 export default function NavbarRightSide({username}) {

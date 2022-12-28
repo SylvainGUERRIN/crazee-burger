@@ -22,7 +22,7 @@ const PrimaryButtonStyled = styled.button`
     text-decoration: none;
     line-height: 1;
 
-    padding: 18px 24px;
+    padding: 12px 24px;
     border-radius: 5px;
     font-size: 15px;
     font-weight: 800;
@@ -30,11 +30,17 @@ const PrimaryButtonStyled = styled.button`
     background-color: ${theme.colors.primary_burger};
     border: 1px solid ${theme.colors.primary_burger};
 
-    &:hover:not(:disabled){
+    /* &:hover:not(:disabled){
     background-color: white;
     color: ${theme.colors.primary_burger};
     border: 1px solid ${theme.colors.primary_burger};
     transition: all 200ms ease-out;
+    } */
+    :hover {
+      color: ${theme.colors.primary};
+      background-color: ${theme.colors.white};
+      border: 1px solid ${theme.colors.primary};
+      transition: all 200ms ease-out;
     }
     &:active{
     color: ${theme.colors.white};
@@ -44,6 +50,21 @@ const PrimaryButtonStyled = styled.button`
     &:disabled{
     opacity: 0.6;
     cursor: not-allowed;
+    z-index: 2;
     }
     
+    &.with-focus {
+    border: 1px solid white;
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.primary};
+    :hover {
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.primary};
+      border: 1px solid ${theme.colors.white};
+    }
+    :active {
+      background-color: ${theme.colors.white};
+      color: ${theme.colors.primary};
+    }
+  }
 `;
