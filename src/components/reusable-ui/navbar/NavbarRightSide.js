@@ -4,7 +4,7 @@ import Profile from './Profile';
 
 export default function NavbarRightSide({username}) {
   return (
-    <NavbarrightsideStyled className='rightSide'>
+    <NavbarrightsideStyled>
         <ToggleButton 
         labelIfUnchecked='activer le mode admin' 
         labelIfChecked='désactiver le mode admin'
