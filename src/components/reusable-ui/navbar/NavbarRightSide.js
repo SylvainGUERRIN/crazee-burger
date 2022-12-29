@@ -8,6 +8,7 @@ export default function NavbarRightSide({username}) {
         <ToggleButton 
         labelIfUnchecked='activer le mode admin' 
         labelIfChecked='désactiver le mode admin'
+        //backgroundColor={"blue"}
         />
         <Profile username={username} className={"profile"}/>
     </NavbarrightsideStyled>
