@@ -14,7 +14,7 @@ export default function Card({imageSource, title, leftDescription}) {
         <div className="description">
           <div className="left-description">{leftDescription}</div>
           <div className="right-description">
-            <PrimaryButton className={"primary-button"} label={"Ajouter"} />
+            <PrimaryButton className="primary-button" label={"Ajouter"} />
           </div>
         </div>
       </div>
