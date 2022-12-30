@@ -1,15 +1,22 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
+import AdminModeContext from '../../../../context/AdminModeContext';
 import {theme} from "../../../../theme"
 import AdminPanel from './adminPanel/AdminPanel';
 import Basket from './Basket';
 import Menu from './Menu';
 
 export default function Main() {
+  const { adminMode, setAdminMode } = useContext(AdminModeContext);
   return (
     <MainStyled>
       <Basket/>
       <Menu/>
-      <AdminPanel/>
+      {adminMode ? 
+            <AdminPanel/>
+          :
+            null
+          }
     </MainStyled>
   )
 }
