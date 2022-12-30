@@ -4,9 +4,12 @@ import ToggleButton from '../ToggleButton';
 import Profile from './Profile';
 import { useState } from 'react';
 import ToastAdmin from './ToastAdmin';
+import { useContext } from 'react';
+import AdminModeContext from '../../../context/AdminModeContext';
 
 export default function NavbarRightSide({username}) {
   const [isModeAdmin, setIsModeAdmin] = useState(false)
+  const { adminMode, setAdminMode } = useContext(AdminModeContext);
 
   const displayToastNotification = () => {
     if(!isModeAdmin){
@@ -21,8 +24,12 @@ export default function NavbarRightSide({username}) {
         draggable: true,
         progress: undefined,
       })
+      setAdminMode(true)
+    }else{
+      setAdminMode(false)
     }
     setIsModeAdmin(!isModeAdmin)
+      
     
   }
 
