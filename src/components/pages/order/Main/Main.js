@@ -7,7 +7,7 @@ import Menu from './Menu';
 export default function Main() {
   return (
     <MainStyled>
-      {/* <Basket/> */}
+      <Basket/>
       <Menu/>
       <AdminPanel/>
     </MainStyled>
@@ -23,7 +23,7 @@ const MainStyled = styled.div`
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
 
   display: grid;
-  /* grid-template-columns: 25% 75%; */
-  grid-template-columns: 1fr;
+  grid-template-columns: 25% 75%;
+  /* grid-template-columns: 1fr; */
   overflow-y: scroll;
 `;
