@@ -21,6 +21,7 @@ const MainStyled = styled.div`
   flex: 1;
   border-bottom-left-radius: ${theme.borderRadius.extraRound};
   border-bottom-right-radius: ${theme.borderRadius.extraRound};
+  /* position: relative; */
 
   display: grid;
   grid-template-columns: 25% 75%;

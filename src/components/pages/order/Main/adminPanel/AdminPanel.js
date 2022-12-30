@@ -1,5 +1,6 @@
 import Tab from "./tab/Tab";
 import styled from "styled-components";
+import { theme } from "../../../../../theme";
 
 
 export default function AdminPanel() {
@@ -13,5 +14,9 @@ export default function AdminPanel() {
 }
 
 const AdminPanelStyled = styled.div`
-  
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: ${theme.colors.white};
+  padding: 10px 15px;
 `;
