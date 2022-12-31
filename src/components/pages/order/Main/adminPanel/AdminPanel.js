@@ -19,4 +19,9 @@ const AdminPanelStyled = styled.div`
   right: 0;
   background-color: ${theme.colors.white};
   padding: 10px 15px;
+  box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
 `;

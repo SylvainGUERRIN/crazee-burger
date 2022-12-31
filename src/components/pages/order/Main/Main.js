@@ -12,11 +12,7 @@ export default function Main() {
     <MainStyled>
       <Basket/>
       <Menu/>
-      {adminMode ? 
-            <AdminPanel/>
-          :
-            null
-          }
+      {adminMode ? <AdminPanel/> : null}
     </MainStyled>
   )
 }
