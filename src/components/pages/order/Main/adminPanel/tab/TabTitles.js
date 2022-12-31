@@ -1,15 +1,21 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { theme } from "../../../../../../theme";
 
 export default function TabTitles({isActiveTab = "add"}) {
+  const [reduceOrOpen, setReduceOrOpen] = useState(true)
 
   const handleAddProduct = () => {
 
   }
 
+  const handleReduceOrOpen = () => {
+
+  }
+
   return (
     <TabTitlesStyled>
-      <div>Réduire/ouvrir</div>
+      <div onClick={handleReduceOrOpen}>Réduire/ouvrir</div>
       <div className={isActiveTab === "add" ? "isActive" : ""} onClick={handleAddProduct}>Ajouter un produit</div>
       <div>Modifier un produit</div>
     </TabTitlesStyled>
