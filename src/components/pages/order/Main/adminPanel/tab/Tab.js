@@ -6,13 +6,13 @@ import { useState } from "react";
 
 export default function Tab() {
   const [reduceOrOpen, setReduceOrOpen] = useState(true)
-  const [isActiveTab, setIsActiveTab] = useState(true)
+  const [isActive, setIsActive] = useState("add")
 
   const adminPanelContextValue = {
     reduceOrOpen,
     setReduceOrOpen,
-    isActiveTab,
-    setIsActiveTab
+    isActive,
+    setIsActive
   };
 
   return (
