@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
 import styled from "styled-components";
+import AdminPanelContext from "../../../../../../context/AdminPanelContext";
 import { theme } from "../../../../../../theme";
 
-export default function TabTitles({isActiveTab = "add"}) {
-  const [reduceOrOpen, setReduceOrOpen] = useState(true)
+export default function TabTitles() {
+  const { reduceOrOpen, setReduceOrOpen } = useContext(AdminPanelContext);
+  const { isActive, setIsActive } = useContext(AdminPanelContext);
 
   const handleAddProduct = () => {
 
@@ -16,7 +18,7 @@ export default function TabTitles({isActiveTab = "add"}) {
   return (
     <TabTitlesStyled>
       <div onClick={handleReduceOrOpen}>Réduire/ouvrir</div>
-      <div className={isActiveTab === "add" ? "isActive" : ""} onClick={handleAddProduct}>Ajouter un produit</div>
+      <div className={isActive === "add" ? "isActive" : "isInactive"} onClick={handleAddProduct}>Ajouter un produit</div>
       <div>Modifier un produit</div>
     </TabTitlesStyled>
   )
