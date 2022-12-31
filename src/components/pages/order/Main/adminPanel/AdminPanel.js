@@ -6,9 +6,7 @@ import { theme } from "../../../../../theme";
 export default function AdminPanel() {
   return (
     <AdminPanelStyled>
-        <Tab title={"Réduire/ouvrir"}/>
-        <Tab title={"Ajouter un produit"} content={"formulaire ajout produit"}/>
-        <Tab title={"Modifier un produit"} content={"produits à modifier"}/>
+        <Tab />
     </AdminPanelStyled>
   )
 }
@@ -18,7 +16,8 @@ const AdminPanelStyled = styled.div`
   bottom: 0;
   right: 0;
   background-color: ${theme.colors.white};
-  padding: 10px 15px;
+  /* padding: 0 15px 10px 15px; */
+  padding-bottom: 10px;
   box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   width: 50%;

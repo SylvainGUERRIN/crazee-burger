@@ -1,16 +1,18 @@
 import TabContent from "./TabContent";
-import TabTitle from "./TabTitle";
-
+import TabTitles from "./TabTitles";
+import styled from "styled-components";
 
 export default function Tab({title, content}) {
   return (
-    <div>
-      <TabTitle title={title}/>
-      {content ? 
-            <TabContent content={content}/>
-          :
-            null
-          }
-    </div>
+    <TabStyled>
+      <TabTitles/>
+      <TabContent/>
+    </TabStyled>
   )
 }
+
+const TabStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
