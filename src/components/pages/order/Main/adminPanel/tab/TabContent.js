@@ -1,11 +1,16 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import AdminPanelContext from "../../../../../../context/AdminPanelContext";
 import { theme } from "../../../../../../theme";
 
-export default function TabContent({isActiveContent = "add"}) {
+export default function TabContent() {
+    const { reduce, setReduce } = useContext(AdminPanelContext);
+    const { isActive, setIsActive } = useContext(AdminPanelContext);
+
   return (
     <TabcontentStyled>
-        <div className={isActiveContent === "add" ? "isActiveContent" : "isInactiveContent"}>formulaire ajout produit</div>
-        <div className={isActiveContent === "modify" ? "isActiveContent" : "isInactiveContent"}>produits à modifier</div>
+        <div className={isActive === "add" ? "isActiveContent" : "isInactiveContent"}>formulaire ajout produit</div>
+        <div className={isActive === "modify" ? "isActiveContent" : "isInactiveContent"}>produits à modifier</div>
     </TabcontentStyled>
   )
 }

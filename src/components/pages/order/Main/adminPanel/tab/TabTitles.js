@@ -4,7 +4,7 @@ import AdminPanelContext from "../../../../../../context/AdminPanelContext";
 import { theme } from "../../../../../../theme";
 
 export default function TabTitles() {
-  const { reduceOrOpen, setReduceOrOpen } = useContext(AdminPanelContext);
+  const { reduce, setReduce } = useContext(AdminPanelContext);
   const { isActive, setIsActive } = useContext(AdminPanelContext);
 
   const handleAddProduct = () => {
