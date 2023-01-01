@@ -8,18 +8,32 @@ export default function TabTitles() {
   const { isActive, setIsActive } = useContext(AdminPanelContext);
 
   const handleAddProduct = () => {
+    if(reduce){
+      setReduce(false)
+    }
+    setIsActive("add")
+  }
 
+  const handleModifyProduct = () => {
+    if(reduce){
+      setReduce(false)
+    }
+    setIsActive("modify")
   }
 
   const handleReduceOrOpen = () => {
-
+    if(!reduce){
+      setReduce(true)
+    }else{
+      setReduce(false)
+    }
   }
 
   return (
     <TabTitlesStyled>
       <div onClick={handleReduceOrOpen}>Réduire/ouvrir</div>
       <div className={isActive === "add" ? "isActive" : "isInactive"} onClick={handleAddProduct}>Ajouter un produit</div>
-      <div>Modifier un produit</div>
+      <div className={isActive === "modify" ? "isActive" : "isInactive"} onClick={handleModifyProduct}>Modifier un produit</div>
     </TabTitlesStyled>
   )
 }
