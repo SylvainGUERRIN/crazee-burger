@@ -1,8 +1,8 @@
 import { createContext } from "react";
 
 export default createContext({
-  reduceOrOpen: true,
-  setReduceOrOpen: () => {},
+  reduce: false,
+  setReduce: () => {},
   isActive: "add",
   setIsActive: () => {}
 });

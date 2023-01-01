@@ -5,12 +5,12 @@ import AdminPanelContext from "../../../../../../context/AdminPanelContext";
 import { useState } from "react";
 
 export default function Tab() {
-  const [reduceOrOpen, setReduceOrOpen] = useState(true)
+  const [reduce, setReduce] = useState(false)
   const [isActive, setIsActive] = useState("add")
 
   const adminPanelContextValue = {
-    reduceOrOpen,
-    setReduceOrOpen,
+    reduce,
+    setReduce,
     isActive,
     setIsActive
   };
